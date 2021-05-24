@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+새로운 도전을 위한 알고리즘 문제 풀기!
+
 <!--
 **CASY82/CASY82** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
