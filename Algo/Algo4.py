@@ -1,2 +1,5 @@
-print(1)
-print("test")
+a = int(input())
+b = int(input())
+
+print(b)
+print(a)
