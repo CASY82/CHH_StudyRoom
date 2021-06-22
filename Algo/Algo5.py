@@ -1,4 +1,5 @@
-data = [[0 for j in range(19)] for i in range(19)]
+#codeup 6096
+ata = [[0 for j in range(19)] for i in range(19)]
 
 
 for i in range(19):
