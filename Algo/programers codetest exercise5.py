@@ -71,6 +71,46 @@ def solution(progresses, speeds):
             stack_re.pop()
 
     return anwser
-#드디어 처음으로 혼자힘으로 풀었다! 하지만 코드가 너무 길고 아직 부족하다.....
+
 
 print(solution(progresses, speeds))
+
+#드디어 처음으로 혼자힘으로 풀었다! 하지만 코드가 너무 길고 아직 부족하다.....
+
+#Queue를 이용한 풀이
+
+# def solution(progresses, speeds):
+#     answer = []
+#     time = 0
+#     count = 0
+#
+#     while len(progresses) > 0:
+#         if (progresses[0] + time * speeds[0]) >= 100:
+#             progresses.pop(0)
+#             speeds.pop(0)
+#             count += 1
+#
+#         else:
+#             if count > 0:
+#                 answer.append(count)
+#                 count = 0
+#             time += 1
+#     answer.append(count)
+#     return answer
+
+# math.ceil을 이용한 풀이
+# import math
+#
+#
+# def solution(progresses, speeds):
+#     progresses = [math.ceil((100 - a) / b) for a, b in zip(progresses, speeds)]
+#     answer = []
+#     front = 0, 0
+#
+#     for idx in range(len(progresses)):
+#         if progresses[idx] > progresses[front]:
+#             answer.append(idx - front)
+#             front = idx
+#     answer.append(len(progresses) - front)
+#
+#     return answer
