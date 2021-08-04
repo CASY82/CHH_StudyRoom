@@ -34,7 +34,7 @@ def lca(a, b):
     if d[a] > d[b]:
         a, b = b, a
 
-    for i in range(LOG = 1, -1, -1):
+    for i in range(LOG - 1, -1, -1):
         if d[b] - d[a] >= (1 << i):
             b = parent[b][i]
 
@@ -53,6 +53,6 @@ set_parent()
 
 m = int(input())
 
-for i in range(m:
-    a, b = map(int, input().split()))
+for i in range(m):
+    a, b = map(int, input().split())
     print(lca(a, b))
