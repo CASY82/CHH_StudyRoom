@@ -1,4 +1,4 @@
-#알고리즘은 구현되었으나 시간 초과
+#결국은 답을 보고 풀게 되었다.... 정말 간단한건데 왜 생각이 안날까...
 import time
 start = time.time()
 S1, S2, S3 = map(int, input().split())
