@@ -25,5 +25,6 @@ for i in range(N-7):
         repair.append(first_W)
         repair.append(first_B)
 
+print(repair)
 print(min(repair))
 
