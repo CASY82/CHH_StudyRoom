@@ -26,6 +26,6 @@ while True:
         if i!="4" and i!="7":
             flag = False
             n -= 1
-    if flag :
+    if flag:
         print(n)
         break
