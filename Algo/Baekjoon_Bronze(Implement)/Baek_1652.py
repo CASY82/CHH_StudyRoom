@@ -42,3 +42,8 @@ for i in range(n):
             count = 0
 
 print(row, col)
+
+# 숏코딩 참고
+# m = [input() for _ in range(int(input()))]
+# f = lambda l: sum(sum('..' in s for s in ss.split('X')) for ss in l)
+# print(f(m), f(map(''.join, zip(*m))))
