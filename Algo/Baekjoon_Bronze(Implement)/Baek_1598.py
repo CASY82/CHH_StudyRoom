@@ -22,3 +22,7 @@ print(result)
 # for i in range(source):
 #     num_list.append([start_num + i for i in range(4)])
 #     start_num += 4
+
+# 좀 더 간단한 풀이
+# A,B=map(int,input().split())
+# print(abs((B-1)%4-(A-1)%4)+abs((B-1)//4-(A-1)//4))
