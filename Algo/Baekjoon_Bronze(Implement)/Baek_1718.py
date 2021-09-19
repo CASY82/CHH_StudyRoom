@@ -27,3 +27,20 @@ for i in range(len(sentence_changer)):
 
 for i in result:
     print(alpha[i], end='')
+
+# 좀 더 깔끔하고 간단한 다른사람의 풀이
+# from string import ascii_lowercase
+#
+# alpha = {ascii_lowercase[i]:i+1 for i in range(26)}
+# word, key, code = input(), input(), ''
+#
+# for i in range(len(word)):
+#     W = word[i]
+#     if W == ' ':
+#         code += ' '
+#         continue
+#     K = key[i % len(key)]
+#     idx = alpha[W] - alpha[K]
+#     code += ascii_lowercase[idx-1]
+#
+# print(code)
