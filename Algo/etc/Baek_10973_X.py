@@ -16,6 +16,12 @@
 # else:
 #     print(-1)
 
+#알고리즘 순서
+# 1. a[k] > a[k+1]가 성립하는 k의 최댓값 구하기
+# 2. k 이후 값들 중 a[k] > a[m]이 성립하는 m 최댓값
+# 3. k,m 값 자리 변경
+# 4. 인덱스 k 이후 값들을 내림차순 정렬
+
 n = int(input())
 compare_list = list(map(int, input().split()))
 bigger = 0
