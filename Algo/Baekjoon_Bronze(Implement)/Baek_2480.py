@@ -3,7 +3,7 @@ dice = list(map(int, input().split()))
 if len(set(dice)) == 3:
     print(max(dice) * 100)
 elif len(set(dice)) == 2:
-    for i in range(1, 7):
+    for i in range(1, 7): #이 부분은 리스트를 sort하여 가운데 숫자를 넣어서 해결하면 for를 쓰지 않아도 된다. 정렬하면 가운데 있는 숫자는 무조건 같을테니
         if dice.count(i) == 2:
             tmp = i
 
