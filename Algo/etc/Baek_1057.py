@@ -18,3 +18,12 @@ while True:
         break
 
 print(count)
+
+#음... 나 왜이렇게 어렵게 풀었지? 지금보니 player 배열이 전혀 필요가 없다.
+# N, k, l = map(int,input().split())
+# cnt = 0
+# while k != l:
+#     cnt += 1
+#     k -= k // 2
+#     l -= l // 2
+# print(cnt)
