@@ -29,7 +29,7 @@ for a in range(1, n + 1):
         if graph[a][b] == INF:
             print("INFINITY", end=" ")
         else:
-            print(grap[a][b], end=" ")
+            print(graph[a][b], end=" ")
 
     print()
 
