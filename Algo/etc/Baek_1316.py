@@ -1,3 +1,4 @@
+# 성공은 했으나 뭔가 찝찝하게 성공하였다...
 n = int(input())
 count = 0
 
@@ -21,3 +22,11 @@ for _ in range(n):
         count += 1
 
 print(count)
+
+# 다른 사람 풀이 참고
+# cnt = 0
+# for i in range( int(input())):
+#     s = input()
+#     if list(s) == sorted(s, key=s.find):
+#         cnt+=1
+# print(cnt)
