@@ -64,7 +64,7 @@ while True:
 #         nn=int(input())
 #         if nn==0:
 #             break
-#         나는 한번 더 직접 더하는 시간이 있어서 해당 코드보다 속도가 느렸으며 메모리가 2배로 사용되었으나 해당 코드는 prime 하나로 해결하였다.
+#         나는 한번 더 직접 더하는 시간이 있어서 해당 코드보다 속도는 빨랐으나 메모리가 2배로 사용되었다. 해당 코드는 prime 하나로 해결하였다.
 #         print(sum(1 for i in range(nn+1,2*nn+1) if prime[i]))
 #
 # sol()
