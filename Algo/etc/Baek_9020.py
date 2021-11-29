@@ -32,3 +32,18 @@ for _ in range(t):
         i += 1
 
     print(first, second)
+
+#다른사람 참고
+# 굉장히 간단한게 나온다는 사실에... 놀랐다 생각해보면 소수를 한번 더 구할 필요가 없었던거 같다.(내 코드에서)
+# sosu = [False, False] + [True] * 10000
+# for i in range(2, 10001):
+#     if sosu[i]:
+#         for j in range(2 * i, 10001, i):
+#             sosu[j] = False
+# t = int(input())
+# for i in range(t):
+#     n = int(input())
+#     for j in range(n // 2, n):
+#         if sosu[j] and sosu[n - j]:
+#             print(n - j, j)
+#             break
