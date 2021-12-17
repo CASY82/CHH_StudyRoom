@@ -1,6 +1,9 @@
 number = "1924"
 k = 2
 
+number = "4177252841"
+k = 4
+
 def solution(number, k):
     answer = ''
     num_list = []
