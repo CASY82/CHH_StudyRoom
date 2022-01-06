@@ -100,6 +100,7 @@
 #
 # print(cnt[0])
 
+#성공!
 import sys
 sys.setrecursionlimit(10 ** 5)
 
