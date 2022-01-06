@@ -2,6 +2,16 @@
 
 새로운 도전을 위한 알고리즘 문제 풀기!
 
+Python 이용하여 백준, 프로그래머스 문제를 중심으로 푸는 중
+
+- 현재 도전중인 문제       
+DP      
+백트래킹               
+DFS, BFS
+
+
+
+
 <!--
 **CASY82/CASY82** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
