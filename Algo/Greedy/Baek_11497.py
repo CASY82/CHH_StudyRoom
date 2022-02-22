@@ -22,3 +22,12 @@ for _ in range(t):
             max_diff = abs(tmp[i] - tmp[i + 1])
 
     print(max_diff)
+
+#더 쉬운 풀이가...
+# for _ in range(int(input())):
+#     n=int(input())
+#     l=sorted(list(map(int, input().split())))
+#     r=0
+#     for i in range(len(l)-2):
+#         r=max(l[i+2]-l[i], r)
+#     print(r)
