@@ -27,3 +27,30 @@ for k in range(t):
         print("Case ", k+1, ":", " Pangram!", sep="")
     else:
         print("Case ", k+1, ":", " Not a pangram", sep="")
+
+# 아스키 로워 케이스를 이용하면 쉽게 dict을 만들 수 있었네!
+# from string import ascii_lowercase
+# n=int(input())
+# for z in range(n):
+#     l=input().lower()
+#     #요 부분이 알고 싶었다. 일일히 치기 너무 귀찮았으므로.
+#     d = {c:0 for c in ascii_lowercase}
+#     for i in l:
+#         if i in d:
+#             d[i]+=1
+#     p=[0,0,0,0]
+#     for j in d:
+#         if d[j]==0:
+#             p[0]=1
+#         if d[j]==1:
+#             p[1]=1
+#         if d[j]==2:
+#             p[2]=1
+#     if p[0]==1:
+#         print('Case ',z+1,':'+' Not a pangram',sep='')
+#     elif p[1]==1:
+#         print('Case ',z+1,':' + ' Pangram!', sep='')
+#     elif p[2]==1:
+#         print('Case ' ,z+1,':' + ' Double pangram!!', sep='')
+#     else:
+#         print('Case ',z+1, ':' + ' Triple pangram!!!', sep='')
