@@ -38,6 +38,7 @@
 # print(cnt)
 
 import sys
+sys.setrecursionlimit(10 ** 5)
 
 r, c = map(int, sys.stdin.readline().split())
 line_map = [list(map(str, sys.stdin.readline().strip())) for _ in range(r)]
