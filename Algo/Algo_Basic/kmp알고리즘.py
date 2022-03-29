@@ -27,6 +27,8 @@ def kmp(parent, pattern):
             if j == patternSize - 1:
                 #여기서 값을 찍으면 됨
                 return True
+                # 여러개를 찾아야 할 때 잊지 말것
+                j = table[j]
             else:
                 j += 1
 
