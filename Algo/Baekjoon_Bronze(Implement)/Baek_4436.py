@@ -23,3 +23,28 @@ while True:
         k += 1
 
     print(k-1)
+
+# 다른 사람 풀이
+
+# def check_list(list):
+#     for x in list:
+#         if not x:
+#             return False
+#     return True
+#
+# while True:
+#     try:
+#         n = int(input())
+#         check = [0] * 10
+#         k = 0
+#         while True:
+#             k += 1
+#             s = n * k
+#             ns = str(s)
+#             for ch in ns:
+#                 check[int(ch)] = 1
+#             if check_list(check):
+#                 break
+#         print(k)
+#     except:
+#         break
