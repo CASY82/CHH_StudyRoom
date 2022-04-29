@@ -23,3 +23,25 @@ for i in range(n+1):
             dp[i][j] = dp[i-1][j]
 
 print(dp[-1][-1])
+
+# 다른사람 풀이
+# n, k = input().split()
+# n = int(n)
+# k = int(k)
+#
+# weight_item = []
+# value_item = []
+#
+# for i in range(n):
+#     w, v = input().split()
+#
+#     weight_item.append(int(w))
+#     value_item.append(int(v))
+#
+# table = [0] * (k + 1)
+#
+# for i in range(n):
+#     for j in range(k, weight_item[i] - 1, -1):
+#         table[j] = max(table[j], table[j - weight_item[i]] + value_item[i])
+#
+# print(table[k])
