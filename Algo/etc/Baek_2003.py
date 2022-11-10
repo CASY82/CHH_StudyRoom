@@ -5,14 +5,15 @@ point1 = 0
 point2 = 1
 cnt = 0
 
+#재채점으로 인해서 틀림 그래서 다시 품
 while point1 <= n-1:
-    if sum(num[point1:point2+1]) == m:
+    if sum(num[point1:point2]) == m:
         cnt += 1
 
-    if sum(num[point1:point2+1]) > m:
+    if sum(num[point1:point2]) > m:
         point1 += 1
     else:
-        if point2 < n-1:
+        if point2 < n:
             point2 += 1
         else:
             point1 += 1
