@@ -1,3 +1,4 @@
+# 쉬운 문제였다.
 import sys
 
 r = int(sys.stdin.readline())
