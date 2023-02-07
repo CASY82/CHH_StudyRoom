@@ -246,30 +246,52 @@
 # except:
 #     print('ROCK')
 
-# 위는 정석적인 코드였고 날먹이 가능할거라고 생각했는데 다른 사람이 올려둔 코드가 있다;;;;
+# # 위는 정석적인 코드였고 날먹이 가능할거라고 생각했는데 다른 사람이 올려둔 코드가 있다;;;;(여기는 이제 안통함)
+# import sys
+#
+# input = sys.stdin.readline
+#
+# ori = input()
+# ori = ori.strip()
+# if ori.find("()") != -1:
+#     print("ROCK")
+#     quit()
+#
+# rep = '&'
+# # 아무래도 내가 생각하지 못했던것이 replace였던거 같다. 이걸 잘 활용했다면 쉽게 풀었을듯?
+# # 해당 부분에서 연산자가 연속 되는 것을 걸러낸다.
+# check = ori.replace('/', rep).replace('-', rep).replace('+', rep).replace('*', rep)
+#
+# try:
+#     eval(check)
+# except:
+#     print("ROCK")
+#     quit()
+#
+# try:
+#     # 소수점을 어떻게 처리해야하나 고민했는데 너무 간단하게 처리되어서 놀람;;;
+#     print(eval(ori.replace('/', "//")))
+# except:
+#     print("ROCK")
+
+
+#이제 통하는 소스 날먹(?)
 import sys
 
 input = sys.stdin.readline
 
-ori = input()
-ori = ori.strip()
-if ori.find("()") != -1:
-    print("ROCK")
-    quit()
 
-rep = '&'
-# 아무래도 내가 생각하지 못했던것이 replace였던거 같다. 이걸 잘 활용했다면 쉽게 풀었을듯?
-# 해당 부분에서 연산자가 연속 되는 것을 걸러낸다.
-check = ori.replace('/', rep).replace('-', rep).replace('+', rep).replace('*', rep)
+def sol(Equation):
+    if Equation[0] in "+-/*" or Equation[-1] in "+-/*":
+        return "ROCK"
+    for i in range(len(Equation) - 1):
+        if Equation[i] in "+-/*(" and Equation[i + 1] in "+-/*)":
+            return "ROCK"
 
-try:
-    eval(check)
-except:
-    print("ROCK")
-    quit()
+    try:
+        return eval(Equation.replace("/", "//").replace("(" * 50, "").replace(")" * 50, ""))
+    except:
+        return "ROCK"
 
-try:
-    # 소수점을 어떻게 처리해야하나 고민했는데 너무 간단하게 처리되어서 놀람;;;
-    print(eval(ori.replace('/', "//")))
-except:
-    print("ROCK")
+
+print(sol(input().rstrip()))
