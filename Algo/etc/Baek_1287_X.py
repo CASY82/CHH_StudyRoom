@@ -275,23 +275,23 @@
 #     print("ROCK")
 
 
-#이제 통하는 소스 날먹(?)
-import sys
-
-input = sys.stdin.readline
-
-
-def sol(Equation):
-    if Equation[0] in "+-/*" or Equation[-1] in "+-/*":
-        return "ROCK"
-    for i in range(len(Equation) - 1):
-        if Equation[i] in "+-/*(" and Equation[i + 1] in "+-/*)":
-            return "ROCK"
-
-    try:
-        return eval(Equation.replace("/", "//").replace("(" * 50, "").replace(")" * 50, ""))
-    except:
-        return "ROCK"
-
-
-print(sol(input().rstrip()))
+#이제 통하는 소스 날먹(?) 안됨
+# import sys
+#
+# input = sys.stdin.readline
+#
+#
+# def sol(Equation):
+#     if Equation[0] in "+-/*" or Equation[-1] in "+-/*":
+#         return "ROCK"
+#     for i in range(len(Equation) - 1):
+#         if Equation[i] in "+-/*(" and Equation[i + 1] in "+-/*)":
+#             return "ROCK"
+#
+#     try:
+#         return eval(Equation.replace("/", "//").replace("(" * 50, "").replace(")" * 50, ""))
+#     except:
+#         return "ROCK"
+#
+#
+# print(sol(input().rstrip()))
