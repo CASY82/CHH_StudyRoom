@@ -4,9 +4,6 @@ length = int(sys.stdin.readline())
 quiz = sys.stdin.readline().strip()
 result = 1
 
-r_cnt = quiz.count("R")
-b_cnt = quiz.count("B")
-
 tmp_b = [x for x in quiz.split("B") if x != ""]
 tmp_r = [x for x in quiz.split("R") if x != ""]
 
