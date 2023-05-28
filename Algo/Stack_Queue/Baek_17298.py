@@ -34,3 +34,25 @@ for i in range(n):
     stack.append(i)
 
 print(*result)
+
+# 다른 사람 풀이(속도가 제일 빠르길래 가져와봄)
+# input = __import__('sys').stdin.readline
+#
+# f = lambda: map(int,input().split())
+#
+#
+# def solve():
+#     N = int(input())
+#     A = list(f())
+#     NGE = [-1] * N
+#     s = [0]
+#
+#     for i in range(1, N):
+#         while s and A[s[-1]] < A[i]:
+#             NGE[s.pop()] = A[i]
+#         s.append(i)
+#     print(*NGE)
+#
+#
+# if __name__ == '__main__':
+#     solve()
