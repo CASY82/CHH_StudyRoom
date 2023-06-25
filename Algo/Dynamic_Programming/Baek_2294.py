@@ -5,6 +5,7 @@ n, k = map(int, sys.stdin.readline().split())
 
 coin = []
 dp = [INF for _ in range(k+1)]
+dp[0] = 0
 
 for _ in range(n):
     val = int(sys.stdin.readline())
@@ -14,7 +15,7 @@ for _ in range(n):
 
 for i in range(1, k+1):
     for j in range(len(coin)):
-        if i - coin[j] > 0:
+        if i - coin[j] >= 0:
             if dp[i] > dp[i - coin[j]] + 1:
                 dp[i] = dp[i - coin[j]] + 1
 
