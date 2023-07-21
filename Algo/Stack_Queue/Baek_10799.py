@@ -24,3 +24,30 @@ for i in range(len(iron_pipe)):
     # print("? : ", pipe_cnt, "result : ", result)
 
 print(result)
+
+import sys
+input = __import__('sys').stdin.readline
+
+def main():
+    string = input().rstrip()
+    st = []
+    res = 0
+
+    for i,ch in  enumerate(string):
+        if ch == '(':
+            st.append(ch)
+        else:
+            if string[i - 1] == '(':
+                st.pop()
+                res += len(st)
+            else:
+                st.pop()
+                res += 1
+
+    print(res)
+
+
+
+
+if __name__ == "__main__":
+    main()
