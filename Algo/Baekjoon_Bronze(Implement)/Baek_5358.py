@@ -1,7 +1,23 @@
 import sys
 
-n = int(sys.stdin.readline())
+while True:
+    s_name = sys.stdin.readline().strip()
 
-for i in range(1, 101):
-    if i ** 2 <= n < (i + 1) ** 2:
-        print("The largest square has side length {}.".format(i))
+    if s_name == "":
+        break
+
+    result = ""
+
+    for word in s_name:
+        if word == "i":
+            result += "e"
+        elif word == "I":
+            result += "E"
+        elif word == "e":
+            result += "i"
+        elif word == "E":
+            result += "I"
+        else:
+            result += word
+
+    print(result)
