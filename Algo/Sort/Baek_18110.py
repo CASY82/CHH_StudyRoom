@@ -25,3 +25,38 @@ if n != 0:
     print(int(my_round(sum(tmp) / len(tmp), 0)))
 else:
     print(0)
+
+# 다른 사람 풀이
+
+# from collections import deque
+# import io, os, sys
+#
+# input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
+#
+#
+# def custom_round(num):
+#     if int(num) * 2 < int(num * 2):
+#         return int(num) + 1
+#     else:
+#         return int(num)
+#
+#
+# n = int(input())
+# li = [int(input()) for _ in range(n)]
+# li.sort()
+#
+# if not li:
+#     print(0)
+# else:
+#     affected = custom_round(n / 100 * 15)
+#
+#     deq = deque(li)
+#     for _ in range(affected):
+#         deq.popleft()
+#         deq.pop()
+#
+#     avg = sum(deq) / len(deq)
+#
+#     result = custom_round(avg)
+#
+#     print(result)
