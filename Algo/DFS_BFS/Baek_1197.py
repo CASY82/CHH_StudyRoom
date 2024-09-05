@@ -1,4 +1,5 @@
 import sys
+sys.setrecursionlimit(500000)
 
 def getParent(parent, x):
     if parent[x] == x:
