@@ -6,7 +6,7 @@ n = int(sys.stdin.readline())
 tmp = n % 10
 tmp_str = deque('SciComLove')
 
-for i in range(n):
+for i in range(tmp):
     front = tmp_str.popleft()
     tmp_str.append(front)
 
