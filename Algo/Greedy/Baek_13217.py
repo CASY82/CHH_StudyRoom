@@ -83,3 +83,26 @@ while k > 0 and honey:
         k -= 1  # 한 번 수집했으므로 K 감소
 
 print(res)
+
+
+# 다른 사람 풀이
+# import sys
+#
+# input = lambda: sys.stdin.readline()
+# N, M, K = map(int, input().split())
+# pot = [int(input()) for _ in range(N)]
+# ans = 0
+# tmp = 0
+# for i in range(N):
+#     d, m = divmod(pot[i], M)
+#     ans += d * M
+#     tmp += d
+#     pot[i] = m
+#
+# if tmp >= K:
+#     ans = K * M
+# else:
+#     pot.sort(reverse=True)
+#     for i in range(min(K-tmp, N)):
+#         ans += pot[i]
+# print(ans)
