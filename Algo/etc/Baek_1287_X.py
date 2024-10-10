@@ -295,3 +295,181 @@
 #
 #
 # print(sol(input().rstrip()))
+
+import sys
+
+sys.setrecursionlimit(50000000)
+
+def evaluate_expression(expr):
+    def parse_expression(tokens):
+        def parse_primary():
+            token = tokens.pop(0)
+            if token == '(':
+                value = parse_expression(tokens)
+                tokens.pop(0)  # pop ')'
+                return value
+            return int(token)
+
+        def parse_term():
+            value = parse_primary()
+            while tokens and tokens[0] in ('*', '/'):
+                op = tokens.pop(0)
+                if op == '*':
+                    value *= parse_primary()
+                elif op == '/':
+                    divisor = parse_primary()
+                    if divisor == 0:
+                        raise ValueError("Division by zero")
+                    value //= divisor
+            return value
+
+        value = parse_term()
+        while tokens and tokens[0] in ('+', '-'):
+            op = tokens.pop(0)
+            if op == '+':
+                value += parse_term()
+            elif op == '-':
+                value -= parse_term()
+        return value
+
+    def tokenize(expr):
+        tokens = []
+        num = ''
+        for char in expr:
+            if char.isdigit():
+                num += char
+            else:
+                if num:
+                    tokens.append(num)
+                    num = ''
+                if char in '+-*/()':
+                    tokens.append(char)
+        if num:
+            tokens.append(num)
+        return tokens
+
+    # 토큰화
+    tokens = tokenize(expr)
+
+    try:
+        result = parse_expression(tokens)  # tokens 인자를 전달
+        if tokens:
+            raise ValueError("Invalid expression")
+        return result
+    except (ValueError, IndexError):
+        return "ROCK"
+
+# 입력 받기
+expression = input().strip()
+print(evaluate_expression(expression))
+
+# 다른 사람 풀이
+# import sys
+# sys.setrecursionlimit(2*10**5)
+# class num(int):
+#     def __init__(self,n):
+#         self.n=int(n)
+#     def __pos__(self):
+#         raise
+#     def __neg__(self):
+#         raise
+#     def __pow__(self,n):
+#         raise
+# s=input()
+# l=[]
+# f=1
+# for i in s:
+#     if i.isdigit():
+#         if f:
+#             l+='num("'
+#         f=0
+#     else:
+#         if f<1:
+#             l+='")'
+#         f=1
+#     l+=i
+# if f==0:
+#     l+='")'
+# news=''.join(l)
+# try:
+#     n=int(eval(news.replace('/','//')))
+#     print(n)
+# except:
+#     print('ROCK')
+
+# 다른 사람 풀이2
+
+# import sys
+# input = sys.stdin.readline
+#
+# s = input().strip()
+#
+# if s[0] in '+-*/':
+#     print('ROCK')
+#     sys.exit()
+# if s[-1] in '+-*/':
+#     print('ROCK')
+#     sys.exit()
+#
+# depth = 0
+# prv = '+'
+# value = []
+# lz = True
+# S = ''
+# for j in range(len(s)):
+#     i = s[j]
+#     if i == '(':
+#         if prv in ')0123456789':
+#             print('ROCK')
+#             sys.exit()
+#         depth += 1
+#         if S == '':
+#             value.append('0+')
+#         else:
+#             value.append(S)
+#         S = ''
+#         prv = i
+#         continue
+#     if i == ')':
+#         if prv in '(+-*/':
+#             print('ROCK')
+#             sys.exit()
+#         depth -= 1
+#         if depth < 0:
+#             print('ROCK')
+#             sys.exit()
+#         try:
+#             x = str(eval(S.replace('/', '//')))
+#         except:
+#             print('ROCK')
+#             sys.exit()
+#         S = value.pop() + x
+#         prv = i
+#         continue
+#     if i in '+-*/':
+#         if prv in '+-*/(':
+#             print('ROCK')
+#             sys.exit()
+#     if i in '0123456789':
+#         if prv != '0' and i != '0':
+#             lz = False
+#         if prv == ')':
+#             print('ROCK')
+#             sys.exit()
+#     else:
+#         lz = True
+#
+#     if not (i == '0' and j != len(s)-1 and s[j+1] in '0123456789' and lz):
+#         S += i
+#     prv = i
+#
+# if depth != 0:
+#     print('ROCK')
+#     sys.exit()
+#
+# try:
+#     x = eval(S.replace('/', '//'))
+# except:
+#     print('ROCK')
+#     sys.exit()
+# print(x)
