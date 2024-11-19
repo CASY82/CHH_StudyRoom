@@ -44,3 +44,23 @@ def expand_around_max(lst):
 new_list = limit_duplicates(student)
 expanded_list = expand_around_max(new_list)
 print(len(expanded_list))
+
+# 다른 사람 풀이
+# import sys
+# input = sys.stdin.readline
+#
+# n = int(input())
+# arr = list(map(int, input().split()))
+# arr.sort()
+# answer = 0
+# remain = []
+#
+# last = 0
+# for i in range(n):
+#     if last < arr[i]:
+#         answer += 1
+#         last = arr[i]
+#     else:
+#         remain.append(arr[i])
+#
+# print(answer + len(set(remain)))
