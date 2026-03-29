@@ -6,7 +6,9 @@ t = int(sys.stdin.readline())
 
 for _ in range(t):
     m = int(sys.stdin.readline())
-    nums = list(map(int, sys.stdin.readline().split()))
+    nums = []
+    while len(nums) < m:
+        nums.extend(map(int, input().split()))
 
     left = [] # 최대 힙
     right = [] # 최소 힙
