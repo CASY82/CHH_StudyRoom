@@ -1,4 +1,4 @@
-# 덧칠하기
+# 리스트 자르기
 
 def solution(n, slicer, num_list):
     answer = []
