@@ -1,5 +1,3 @@
-# flag에 따라 다른 값 반환하기
-
 def solution(id_pw, db):
     for id, pw in db:
         if id == id_pw[0] and pw == id_pw[1]:
